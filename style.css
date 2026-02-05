@@ -1,0 +1,50 @@
+/* Page background & font */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Main heading */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Product container */
+div {
+    background-color: #white;
+    padding: 15px;
+    margin: 20px auto;
+    width: 250px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Product name */
+h3 {
+    color: #222;
+}
+
+/* Price text */
+p {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Button style */
+button {
+    background-color: #ff6f61;
+    color: white;
+    border:;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #e65a50;
+}
