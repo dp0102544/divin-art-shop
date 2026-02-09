@@ -41,3 +41,12 @@ function removeFromCart(index) {
 }
 
 updateCartUI();
+function filterCategory(category) {
+    document.querySelectorAll(".product").forEach(product => {
+        product.style.display =
+            category === "all" || product.dataset.category === category
+            ? "block"
+            : "none";
+    });
+}
+
