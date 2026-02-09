@@ -9,24 +9,28 @@
 
 <body>
 
-    <h1>🛍️ Ink & Aura</h1>
+   <header class="top-bar">
+    <div class="logo">🛍️ Ink & Aura</div>
 
-<div class="search-box">
-    <input
-        type="text"
-        id="search"
-        placeholder="Search products..."
-        onkeyup="searchProducts()"
-    >
-</div>
+    <div class="search-container">
+        <input
+            type="text"
+            id="search"
+            placeholder="Search products..."
+            onkeyup="searchProducts()"
+        >
+        <span class="search-icon">🔍</span>
+    </div>
+
+    <div class="cart-info">
+        🛒 <span id="cart-count">0</span>
+    </div>
+</header>
 
 <p style="text-align:center; font-size:18px;">
     Welcome to the website
 </p>
 
-<p style="text-align:center; font-size:18px;">
-    🛒 Cart: <span id="cart-count">0</span>
-</p>
     <h2>Products</h2>
 
     <h2>🧺 Cart Items</h2>
@@ -98,6 +102,7 @@
 
 </body>
 </html>
+
 
 
 
