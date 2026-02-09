@@ -31,6 +31,13 @@ function updateCartUI() {
 
     localStorage.setItem("cart", JSON.stringify(cart));
 }
+if (cart.length === 0) {
+    cartItems.innerHTML = "<li>Your cart is empty 🛒</li>";
+    cartCount.innerText = 0;
+    if (totalPriceEl) totalPriceEl.innerText = 0;
+    localStorage.setItem("cart", JSON.stringify(cart));
+    return;
+}
 
 /* =====================
    ADD TO CART
@@ -108,3 +115,4 @@ function filterCategory(category) {
    LOAD CART ON REFRESH
 ===================== */
 updateCartUI();
+
