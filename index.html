@@ -11,6 +11,12 @@
 
    <header class="top-bar">
     <div class="logo">🛍️ Ink & Aura</div>
+    <div class="categories">
+    <button onclick="filterCategory('all')">All</button>
+    <button onclick="filterCategory('brush')">Brushes</button>
+    <button onclick="filterCategory('color')">Colors</button>
+    <button onclick="filterCategory('book')">Books</button>
+</div>
 
     <div class="search-container">
         <input
@@ -41,49 +47,49 @@
 
     <div class="products">
         
-        <div class="product">
+        <div class="product"data-category="book">
             <h3>Sketch Book</h3>
             <img src="https://i.pinimg.com/736x/7a/44/55/7a4455115fbf5d63d10c0dc021aee328.jpg">
             <p>Price: ₹100</p>
             <button onclick="addToCart('Sketch Book')">Add to Cart</button>
         </div>
 
-        <div class="product">
+        <div class="product"data-category="colour">
             <h3>Doms Colour Pencil</h3>
             <img src="https://tse1.mm.bing.net/th/id/OIP.NzXoLV73IsYPRw1q0JqMnAHaHa">
             <p>Price: ₹90</p>
             <button onclick="addToCart('Doms Colour Pencil')">Add to Cart</button>
         </div>
 
-        <div class="product">
+        <div class="product"data-category="colour">
             <h3>Crayon</h3>
             <img src="https://domsindia.com/wp-content/uploads/2022/08/DOMS-Long-Wax-Crayons-12-Shades.jpg">
             <p>Price: ₹50</p>
             <button onclick="addToCart('Crayon')">Add to Cart</button>
         </div>
 
-        <div class="product">
+        <div class="product"data-category="brush">
             <h3>Paint Brush</h3>
             <img src="https://m.media-amazon.com/images/I/815M6utnCVL._AC_SL1500_.jpg">
             <p>Price: ₹95</p>
             <button onclick="addToCart('Paint Brush')">Add to Cart</button>
         </div>
 
-        <div class="product">
+        <div class="product"data-category="tools">
             <h3>Paint Gloves</h3>
             <img src="https://www.xencelabs.com/store/Uploads/goods/20211222/0fbd34c96b9e458090ab8e09528bb772.jpg">
             <p>Price: ₹120</p>
             <button onclick="addToCart('Paint Gloves')">Add to Cart</button>
         </div>
 
-        <div class="product">
+        <div class="product"data-category="brush">
             <h3>Ink Brush</h3>
             <img src="https://i.pinimg.com/1200x/94/43/27/944327ccfc0b48f83905f17885d8720c.jpg">
             <p>Price: ₹399</p>
             <button onclick="addToCart('Ink Brush')">Add to Cart</button>
         </div>
 
-        <div class="product">
+        <div class="product"data-category="brush">
             <h3>Calligraphy Ink Brush</h3>
             <img src="https://i.pinimg.com/1200x/e9/42/3f/e9423fe7377fbde8f0a6e6c9b071377f.jpg">
             <p>Price: ₹417</p>
@@ -102,6 +108,7 @@
 
 </body>
 </html>
+
 
 
 
