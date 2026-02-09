@@ -49,3 +49,22 @@ footer {
     text-align: center;
     padding: 20px;
 }
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.search-box input {
+    width: 220px;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: purple;
+}
+
