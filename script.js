@@ -72,4 +72,39 @@ function removeFromCart(index) {
    CHECKOUT
 ===================== */
 function goToCheckout() {
-    if (cart.lengt
+    if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+    }
+    window.location.href = "checkout.html";
+}
+
+/* =====================
+   SEARCH PRODUCTS
+===================== */
+function searchProducts() {
+    let input = document.getElementById("search").value.toLowerCase();
+    let products = document.querySelectorAll(".product");
+
+    products.forEach(product => {
+        let name = product.querySelector("h3").innerText.toLowerCase();
+        product.style.display = name.includes(input) ? "block" : "none";
+    });
+}
+
+/* =====================
+   CATEGORY FILTER
+===================== */
+function filterCategory(category) {
+    document.querySelectorAll(".product").forEach(p => {
+        p.style.display =
+            category === "all" || p.dataset.category === category
+                ? "block"
+                : "none";
+    });
+}
+
+/* =====================
+   LOAD CART ON REFRESH
+===================== */
+updateCartUI();
