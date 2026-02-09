@@ -1,6 +1,7 @@
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
-let cartCount = document.getElementById("cart-count");
-let cartItems = document.getElementById("cart-items");
+
+const cartCount = document.getElementById("cart-count");
+const cartItems = document.getElementById("cart-items");
 
 function updateCartUI() {
     cartCount.innerText = cart.length;
@@ -19,10 +20,12 @@ function updateCartUI() {
         cartItems.appendChild(li);
     });
 
-    let totalLi = document.createElement("li");
-    totalLi.style.fontWeight = "bold";
-    totalLi.innerText = `Total: ₹${total}`;
-    cartItems.appendChild(totalLi);
+    if (cart.length > 0) {
+        let totalLi = document.createElement("li");
+        totalLi.style.fontWeight = "bold";
+        totalLi.innerText = `Total: ₹${total}`;
+        cartItems.appendChild(totalLi);
+    }
 
     localStorage.setItem("cart", JSON.stringify(cart));
 }
