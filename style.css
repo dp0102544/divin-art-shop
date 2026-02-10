@@ -303,6 +303,13 @@ footer {
     object-fit: cover;
     display: block;
 }
+img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    max-width: 100%;
+}
+
 
 
 
