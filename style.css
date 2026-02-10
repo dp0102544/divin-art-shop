@@ -367,6 +367,16 @@ img {
     background: purple;
     color: white;
 }
+.products {
+    display: grid !important;
+}
+
+.product {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
 
 
 
