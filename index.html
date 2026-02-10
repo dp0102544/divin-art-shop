@@ -2,173 +2,117 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ink & Aura</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- ===== HEADER ===== -->
-<header class="top-bar">
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
     <div class="logo">🛍️ Ink & Aura</div>
 
-    <div class="filters">
-        <button onclick="filterCategory('all')" class="active">All</button>
-        <button onclick="filterCategory('brush')">Brushes</button>
-        <button onclick="filterCategory('color')">Colors</button>
-        <button onclick="filterCategory('book')">Books</button>
-        <button onclick="filterCategory('tool')">Tools</button>
-    </div>
+    <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#products">Shop</a>
+        <a href="#categories">Categories</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
 
-    <div class="search-container">
+    <div class="search-box">
         <input type="text" id="search" placeholder="Search products..." onkeyup="searchProducts()">
-        <span class="search-icon">🔍</span>
     </div>
 
-    <div class="cart-info">
+    <div class="cart">
         🛒 <span id="cart-count">0</span>
     </div>
 </header>
 
 <!-- ===== HERO ===== -->
-<section class="hero-banner">
-    <div class="hero-text">
-        <h1>Explore Quality Art Supplies</h1>
-        <p>Create • Sketch • Inspire</p>
-        <button onclick="filterCategory('all')">Shop Now</button>
-    </div>
+<section class="hero">
+    <h1>Explore Quality Art Supplies</h1>
+    <p>Create • Sketch • Inspire</p>
+    <button onclick="filterCategory('all')">Shop Now</button>
 </section>
 
 <!-- ===== CATEGORIES ===== -->
-<section class="browse-categories">
-    <div class="category-card" onclick="filterCategory('brush')">🎨 Brushes</div>
-    <div class="category-card" onclick="filterCategory('color')">🖍 Colors</div>
-    <div class="category-card" onclick="filterCategory('book')">📘 Sketch Books</div>
-    <div class="category-card" onclick="filterCategory('tool')">🧤 Tools</div>
+<section class="categories" id="categories">
+    <div onclick="filterCategory('brush')">🎨 Brushes</div>
+    <div onclick="filterCategory('color')">🖍 Colors</div>
+    <div onclick="filterCategory('book')">📘 Sketch Books</div>
+    <div onclick="filterCategory('tool')">🧤 Tools</div>
 </section>
 
-<h2 style="text-align:center;">Products</h2>
+<!-- ===== FILTER BUTTONS ===== -->
+<div class="filters">
+    <button onclick="filterCategory('all')" class="active">All</button>
+    <button onclick="filterCategory('brush')">Brushes</button>
+    <button onclick="filterCategory('color')">Colors</button>
+    <button onclick="filterCategory('book')">Books</button>
+    <button onclick="filterCategory('tool')">Tools</button>
+</div>
+
+<h2 id="products">Products</h2>
 
 <!-- ===== CART ===== -->
-<h3 style="text-align:center;">🧺 Cart Items</h3>
-<ul id="cart-items" style="max-width:320px; margin:auto;"></ul>
+<ul id="cart-items"></ul>
 
-<button onclick="window.location.href='checkout.html'" style="display:block; margin:20px auto;">
-    Proceed to Checkout
-</button>
-
-<!-- ===== PRODUCTS GRID ===== -->
+<!-- ===== PRODUCTS ===== -->
 <div class="products">
 
-    <!-- Sketch Book -->
     <div class="product" data-category="book">
         <span class="badge">Popular</span>
-        <h3>Sketch Book</h3>
         <img src="https://i.pinimg.com/736x/7a/44/55/7a4455115fbf5d63d10c0dc021aee328.jpg">
+        <h3>Sketch Book</h3>
         <p>₹100</p>
-        <div class="product-rating">★★★★☆</div>
-        <button class="quick-view-btn">Quick View</button>
         <button onclick="addToCart('Sketch Book',100)">Add to Cart</button>
-        <button class="wishlist-btn">♡ Wishlist</button>
     </div>
 
-    <!-- Doms Colour Pencil -->
     <div class="product" data-category="color">
-        <h3>Doms Colour Pencil</h3>
         <img src="https://tse1.mm.bing.net/th/id/OIP.NzXoLV73IsYPRw1q0JqMnAHaHa">
+        <h3>Doms Colour Pencil</h3>
         <p>₹90</p>
-        <div class="product-rating">★★★★☆</div>
-        <button class="quick-view-btn">Quick View</button>
         <button onclick="addToCart('Doms Colour Pencil',90)">Add to Cart</button>
-        <button class="wishlist-btn">♡ Wishlist</button>
     </div>
 
-    <!-- Crayon (RESTORED) -->
     <div class="product" data-category="color">
-        <h3>Crayon</h3>
         <img src="https://domsindia.com/wp-content/uploads/2022/08/DOMS-Long-Wax-Crayons-12-Shades.jpg">
+        <h3>Crayon</h3>
         <p>₹50</p>
-        <div class="product-rating">★★★★☆</div>
-        <button class="quick-view-btn">Quick View</button>
         <button onclick="addToCart('Crayon',50)">Add to Cart</button>
-        <button class="wishlist-btn">♡ Wishlist</button>
     </div>
 
-    <!-- Paint Brush -->
     <div class="product" data-category="brush">
-        <h3>Paint Brush</h3>
         <img src="https://m.media-amazon.com/images/I/815M6utnCVL._AC_SL1500_.jpg">
+        <h3>Paint Brush</h3>
         <p>₹95</p>
-        <div class="product-rating">★★★★☆</div>
-        <button class="quick-view-btn">Quick View</button>
         <button onclick="addToCart('Paint Brush',95)">Add to Cart</button>
-        <button class="wishlist-btn">♡ Wishlist</button>
     </div>
 
-    <!-- Ink Brush (RESTORED) -->
     <div class="product" data-category="brush">
-        <h3>Ink Brush</h3>
         <img src="https://i.pinimg.com/1200x/94/43/27/944327ccfc0b48f83905f17885d8720c.jpg">
+        <h3>Ink Brush</h3>
         <p>₹399</p>
-        <div class="product-rating">★★★★☆</div>
-        <button class="quick-view-btn">Quick View</button>
         <button onclick="addToCart('Ink Brush',399)">Add to Cart</button>
-        <button class="wishlist-btn">♡ Wishlist</button>
     </div>
 
-    <!-- Calligraphy Ink Brush (RESTORED) -->
     <div class="product" data-category="brush">
         <span class="badge">Popular</span>
-        <h3>Calligraphy Ink Brush</h3>
         <img src="https://i.pinimg.com/1200x/e9/42/3f/e9423fe7377fbde8f0a6e6c9b071377f.jpg">
+        <h3>Calligraphy Ink Brush</h3>
         <p>₹417</p>
-        <div class="product-rating">★★★★★</div>
-        <button class="quick-view-btn">Quick View</button>
         <button onclick="addToCart('Calligraphy Ink Brush',417)">Add to Cart</button>
-        <button class="wishlist-btn">♡ Wishlist</button>
     </div>
 
-    <!-- Paint Gloves -->
     <div class="product" data-category="tool">
-        <span class="badge">Popular</span>
-        <h3>Paint Gloves</h3>
         <img src="https://www.xencelabs.com/store/Uploads/goods/20211222/0fbd34c96b9e458090ab8e09528bb772.jpg">
+        <h3>Paint Gloves</h3>
         <p>₹120</p>
-        <div class="product-rating">★★★★☆</div>
-        <button class="quick-view-btn">Quick View</button>
         <button onclick="addToCart('Paint Gloves',120)">Add to Cart</button>
-        <button class="wishlist-btn">♡ Wishlist</button>
     </div>
-<div class="product" data-category="brush">
-    <h3>Ink Brush</h3>
-    <img src="https://i.pinimg.com/1200x/94/43/27/944327ccfc0b48f83905f17885d8720c.jpg">
-    <p>₹399</p>
-    <div class="product-rating">★★★★☆</div>
-    <button class="quick-view-btn">Quick View</button>
-    <button onclick="addToCart('Ink Brush',399)">Add to Cart</button>
-    <button class="wishlist-btn">♡ Wishlist</button>
-</div>
-<div class="product" data-category="brush">
-    <span class="badge">Popular</span>
-    <h3>Calligraphy Ink Brush</h3>
-    <img src="https://i.pinimg.com/1200x/e9/42/3f/e9423fe7377fbde8f0a6e6c9b071377f.jpg">
-    <p>₹417</p>
-    <div class="product-rating">★★★★★</div>
-    <button class="quick-view-btn">Quick View</button>
-    <button onclick="addToCart('Calligraphy Ink Brush',417)">Add to Cart</button>
-    <button class="wishlist-btn">♡ Wishlist</button>
-</div>
 
 </div>
-
-<!-- ===== TRUST ===== -->
-<section class="trust">
-    <div>🔒 Secure Checkout</div>
-    <div>🚚 Fast Delivery</div>
-    <div>↩️ Easy Returns</div>
-    <div>⭐ 4.8/5 Customer Rating</div>
-</section>
 
 <!-- ===== FOOTER ===== -->
 <footer>
@@ -179,4 +123,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
