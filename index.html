@@ -36,14 +36,6 @@
     </div>
 </header>
 
-<!-- ===== HERO ===== -->
-<section class="hero-banner">
-    <div class="hero-text">
-        <h1>Explore Quality Art Supplies</h1>
-        <p>Create • Sketch • Inspire</p>
-        <button onclick="filterCategory('all')">Shop Now</button>
-    </div>
-</section>
 
 <!-- ===== CATEGORIES ===== -->
 <section class="browse-categories">
@@ -55,9 +47,22 @@
 
 <h2 style="text-align:center;">Products</h2>
 
-<!-- ===== CART ===== -->
-<h3 style="text-align:center;">🧺 Cart Items</h3>
-<ul id="cart-items" style="max-width:320px; margin:auto;"></ul>
+<!-- ===== CART DRAWER ===== -->
+<div class="cart-overlay" onclick="openCart()"></div>
+
+<div class="cart-drawer">
+    <div class="cart-header">
+        <h3>Your Cart 🛒</h3>
+        <button onclick="closeCart()">✖</button>
+    </div>
+
+    <ul id="cart-items"></ul>
+
+    <div class="cart-footer">
+        <p id="cart-total"></p>
+    </div>
+</div>
+
 
 <button onclick="window.location.href='checkout.html'"
         style="display:block; margin:20px auto;">
@@ -152,3 +157,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+
